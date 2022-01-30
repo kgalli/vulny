@@ -1,0 +1,2484 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "ubuntu:20.04",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "ubuntu",
+      "Name": "20.04"
+    },
+    "ImageID": "sha256:d13c942271d66cb0954c3ba93e143cd253421fe0772b8bed32c4c0077a546d4d",
+    "DiffIDs": [
+      "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+    ],
+    "RepoTags": [
+      "ubuntu:20.04"
+    ],
+    "RepoDigests": [
+      "ubuntu@sha256:b5a61709a9a44284d88fb12e5c48db0409cfad5b69d4ff8224077c57302df9cf"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "container": "40535a229fa11565283074d4a5d7e46486684612ba09659ffd3e4b4e3e1e0be2",
+      "created": "2022-01-07T02:25:30.389665393Z",
+      "docker_version": "20.10.7",
+      "history": [
+        {
+          "created": "2022-01-07T02:25:29.849530323Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:122ad323412c2e70b3138d8eb62648c4692989de91be1ffb6b4bf086c8311b62 in / "
+        },
+        {
+          "created": "2022-01-07T02:25:30.389665393Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"bash\"]",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "bash"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Image": "sha256:511e95b5f19fb981107b5f8fd5456280b814a8b089dac98a81caae9d273d5c3a"
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "ubuntu:20.04 (ubuntu 20.04)",
+      "Class": "os-pkgs",
+      "Type": "ubuntu",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2019-18276",
+          "PkgName": "bash",
+          "InstalledVersion": "5.0-6ubuntu1.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-18276",
+          "Title": "bash: when effective UID is not equal to its real UID the saved UID is not dropped",
+          "Description": "An issue was discovered in disable_priv_mode in shell.c in GNU Bash through 5.0 patch 11. By default, if Bash is run with its effective UID not equal to its real UID, it will drop privileges by setting its effective UID to its real UID. However, it does so incorrectly. On Linux and other systems that support \"saved UID\" functionality, the saved UID is not dropped. An attacker with command execution in the shell can use \"enable -f\" for runtime loading of a new builtin, which can be a shared object that calls setuid() and therefore regains privileges. However, binaries running with an effective UID of 0 are unaffected.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-273"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.2,
+              "V3Score": 7.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.8
+            }
+          },
+          "References": [
+            "http://packetstormsecurity.com/files/155498/Bash-5.0-Patch-11-Privilege-Escalation.html",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18276",
+            "https://github.com/bminor/bash/commit/951bdaad7a18cc0dc1036bba86b18b90874d39ff",
+            "https://linux.oracle.com/cve/CVE-2019-18276.html",
+            "https://linux.oracle.com/errata/ELSA-2021-1679.html",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://security.gentoo.org/glsa/202105-34",
+            "https://security.netapp.com/advisory/ntap-20200430-0003/",
+            "https://www.youtube.com/watch?v=-wGtxJ8opa8"
+          ],
+          "PublishedDate": "2019-11-28T01:15:00Z",
+          "LastModifiedDate": "2021-05-26T12:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "bsdutils",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "bsdutils",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "bsdutils",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2016-2781",
+          "PkgName": "coreutils",
+          "InstalledVersion": "8.30-3ubuntu2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-2781",
+          "Title": "coreutils: Non-privileged session can escape to the parent session in chroot",
+          "Description": "chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+              "V2Score": 2.1,
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:C/I:C/A:C",
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "V2Score": 6.2,
+              "V3Score": 8.6
+            }
+          },
+          "References": [
+            "http://seclists.org/oss-sec/2016/q1/452",
+            "http://www.openwall.com/lists/oss-security/2016/02/28/2",
+            "http://www.openwall.com/lists/oss-security/2016/02/28/3",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2781",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://lore.kernel.org/patchwork/patch/793178/"
+          ],
+          "PublishedDate": "2017-02-07T15:59:00Z",
+          "LastModifiedDate": "2021-02-25T17:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "fdisk",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "fdisk",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "fdisk",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "libblkid1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "libblkid1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "libblkid1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-38604",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-38604",
+          "Title": "glibc: NULL pointer dereference in helper_thread() in mq_notify.c while handling NOTIFY_REMOVED messages",
+          "Description": "In librt in the GNU C Library (aka glibc) through 2.34, sysdeps/unix/sysv/linux/mq_notify.c mishandles certain NOTIFY_REMOVED data, leading to a NULL pointer dereference. NOTE: this vulnerability was introduced as a side effect of the CVE-2021-33574 fix.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-476"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://blog.tuxcare.com/cve/tuxcare-team-identifies-cve-2021-38604-a-new-vulnerability-in-glibc",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38604",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GYEXYM37RCJWJ6B5KQUYQI4NZBDDYSXP/",
+            "https://security.netapp.com/advisory/ntap-20210909-0005/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=28213",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=4cc79c217744743077bf7a0ec5e0a4318f1e6641",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=b805aebd42364fe696e417808a700fdb9800c9e8"
+          ],
+          "PublishedDate": "2021-08-12T16:15:00Z",
+          "LastModifiedDate": "2021-10-07T19:06:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3999",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3999",
+          "Title": "glibc: Off-by-one buffer overflow/underflow in getcwd()",
+          "Description": "A flaw was found in glibc. An off-by-one buffer overflow and underflow in getcwd() may lead to memory corruption when the size of the buffer is exactly 1. A local attacker who can control the input buffer and size passed to getcwd() in a setuid program could use this flaw to potentially execute arbitrary code and escalate their privileges on the system.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.4
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/4"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2022-23218",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-23218",
+          "Title": "glibc: stack-based buffer overflow in svcunix_create via long pathnames",
+          "Description": "The deprecated compatibility function svcunix_create in the sunrpc module of the GNU C Library (aka glibc) through 2.34 copies its path argument on the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) arbitrary code execution.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-120"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=28768"
+          ],
+          "PublishedDate": "2022-01-14T07:15:00Z",
+          "LastModifiedDate": "2022-01-21T03:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-23219",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-23219",
+          "Title": "glibc: stack-based buffer overflow in sunrpc clnt_create via a long pathname",
+          "Description": "The deprecated compatibility function clnt_create in the sunrpc module of the GNU C Library (aka glibc) through 2.34 copies its hostname argument on the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) arbitrary code execution.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-120"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=22542"
+          ],
+          "PublishedDate": "2022-01-14T07:15:00Z",
+          "LastModifiedDate": "2022-01-21T16:48:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2016-10228",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-10228",
+          "Title": "glibc: iconv program can hang when invoked with the -c option",
+          "Description": "The iconv program in the GNU C Library (aka glibc or libc6) 2.31 and earlier, when invoked with multiple suffixes in the destination encoding (TRANSLATE or IGNORE) along with the -c option, enters an infinite loop when processing invalid multi-byte input sequences, leading to a denial of service.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 4.3,
+              "V3Score": 5.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "http://openwall.com/lists/oss-security/2017/03/01/10",
+            "http://www.securityfocus.com/bid/96525",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10228",
+            "https://linux.oracle.com/cve/CVE-2016-10228.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://security.gentoo.org/glsa/202101-20",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=19519",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=19519#c21",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=26224"
+          ],
+          "PublishedDate": "2017-03-02T01:59:00Z",
+          "LastModifiedDate": "2021-02-25T17:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-25013",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-25013",
+          "Title": "glibc: buffer over-read in iconv when processing invalid multi-byte input sequences in the EUC-KR encoding",
+          "Description": "The iconv feature in the GNU C Library (aka glibc or libc6) through 2.32, when processing invalid multi-byte input sequences in the EUC-KR encoding, may have a buffer over-read.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 7.1,
+              "V3Score": 5.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.8
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-25013",
+            "https://linux.oracle.com/cve/CVE-2019-25013.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://lists.apache.org/thread.html/r32d767ac804e9b8aad4355bb85960a6a1385eab7afff549a5e98660f@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r448bb851cc8e6e3f93f3c28c70032b37062625d81214744474ac49e7@%3Cdev.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r4806a391091e082bdea17266452ca656ebc176e51bb3932733b3a0a2@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r499e4f96d0b5109ef083f2feccd33c51650c1b7d7068aa3bd47efca9@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r5af4430421bb6f9973294691a7904bbd260937e9eef96b20556f43ff@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r750eee18542bc02bd8350861c424ee60a9b9b225568fa09436a37ece@%3Cissues.zookeeper.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7a2e94adfe0a2f0a1d42e4927e8c32ecac97d37db9cb68095fe9ddbc@%3Cdev.zookeeper.apache.org%3E",
+            "https://lists.apache.org/thread.html/rd2354f9ccce41e494fbadcbc5ad87218de6ec0fff8a7b54c8462226c@%3Cissues.zookeeper.apache.org%3E",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4Y6TX47P47KABSFOL26FLDNVCWXDKDEZ/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TVCUNLQ3HXGS4VPUQKWTJGRAW2KTFGXS/",
+            "https://security.netapp.com/advisory/ntap-20210205-0004/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=24973",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=ee7a3144c9922808181009b7b3e50e852fb4999b"
+          ],
+          "PublishedDate": "2021-01-04T18:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-27618",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-27618",
+          "Title": "glibc: iconv when processing invalid multi-byte input sequences fails to advance the input state, which could result in an infinite loop",
+          "Description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid multi-byte input sequences in IBM1364, IBM1371, IBM1388, IBM1390, and IBM1399 encodings, fails to advance the input state, which could lead to an infinite loop in applications, resulting in a denial of service, a different vulnerability from CVE-2016-10228.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-835"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 2.1,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27618",
+            "https://linux.oracle.com/cve/CVE-2020-27618.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://security.netapp.com/advisory/ntap-20210401-0006/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=19519#c21",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=26224"
+          ],
+          "PublishedDate": "2021-02-26T23:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-29562",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-29562",
+          "Title": "glibc: assertion failure in iconv when converting invalid UCS4",
+          "Description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.30 to 2.32, when converting UCS4 text containing an irreversible character, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-617"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:H/Au:S/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 2.1,
+              "V3Score": 4.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.8
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29562",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TVCUNLQ3HXGS4VPUQKWTJGRAW2KTFGXS/",
+            "https://security.gentoo.org/glsa/202101-20",
+            "https://security.netapp.com/advisory/ntap-20210122-0004/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=26923",
+            "https://sourceware.org/pipermail/libc-alpha/2020-November/119822.html"
+          ],
+          "PublishedDate": "2020-12-04T07:15:00Z",
+          "LastModifiedDate": "2021-03-19T18:41:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-6096",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-6096",
+          "Title": "glibc: signed comparison vulnerability in the ARMv7 memcpy function",
+          "Description": "An exploitable signed comparison vulnerability exists in the ARMv7 memcpy() implementation of GNU glibc 2.30.9000. Calling memcpy() (on ARMv7 targets that utilize the GNU glibc implementation) with a negative value for the 'num' parameter results in a signed comparison vulnerability. If an attacker underflows the 'num' parameter to memcpy(), this vulnerability could lead to undefined behavior such as writing to out-of-bounds memory and potentially remote code execution. Furthermore, this memcpy() implementation allows for program execution to continue in scenarios where a segmentation fault or crash should have occurred. The dangers occur in that subsequent execution and iterations of this code will be executed with this corrupted data.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-191"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 8.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6096",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SPYXTDOOB4PQGTYAMZAZNJIB3FF6YQXI/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/URXOIA2LDUKHQXK4BE55BQBRI6ZZG3Y6/",
+            "https://security.gentoo.org/glsa/202101-20",
+            "https://sourceware.org/bugzilla/attachment.cgi?id=12334",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=25620",
+            "https://talosintelligence.com/vulnerability_reports/TALOS-2020-1019",
+            "https://ubuntu.com/security/notices/USN-4954-1",
+            "https://www.talosintelligence.com/vulnerability_reports/TALOS-2020-1019"
+          ],
+          "PublishedDate": "2020-04-01T22:15:00Z",
+          "LastModifiedDate": "2021-03-04T20:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-27645",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-27645",
+          "Title": "glibc: Use-after-free in addgetnetgrentX function in netgroupcache.c",
+          "Description": "The nameserver caching daemon (nscd) in the GNU C Library (aka glibc or libc6) 2.29 through 2.33, when processing a request for netgroup lookup, may crash due to a double-free, potentially resulting in degraded service or Denial of Service on the local system. This is related to netgroupcache.c.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-415"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 1.9,
+              "V3Score": 2.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 2.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27645",
+            "https://linux.oracle.com/cve/CVE-2021-27645.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9560.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7LZNT6KTMCCWPWXEOGSHD3YLYZKUGMH5/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I7TS26LIZSOBLGJEZMJX4PXT5BQDE2WS/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27462"
+          ],
+          "PublishedDate": "2021-02-24T15:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3326",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3326",
+          "Title": "glibc: Assertion failure in ISO-2022-JP-3 gconv module related to combining characters",
+          "Description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid input sequences in the ISO-2022-JP-3 encoding, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-617"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2021/01/28/2",
+            "https://bugs.chromium.org/p/project-zero/issues/detail?id=2146",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3326",
+            "https://linux.oracle.com/cve/CVE-2021-3326.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://security.netapp.com/advisory/ntap-20210304-0007/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27256",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=7d88c6142c6efc160c0ee5e4f85cde382c072888",
+            "https://sourceware.org/pipermail/libc-alpha/2021-January/122058.html"
+          ],
+          "PublishedDate": "2021-01-27T20:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-33574",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-33574",
+          "Title": "glibc: mq_notify does not handle separately allocated thread attributes",
+          "Description": "The mq_notify function in the GNU C Library (aka glibc) versions 2.32 and 2.33 has a use-after-free. It may use the notification thread attributes object (passed through its struct sigevent parameter) after it has been freed by the caller, leading to a denial of service (application crash) or possibly unspecified other impact.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-416"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574",
+            "https://linux.oracle.com/cve/CVE-2021-33574.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9560.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KJYYIMDDYOHTP2PORLABTOHYQYYREZDD/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RBUUWUGXVILQXVWEOU7N42ICHPJNAEUP/",
+            "https://security.gentoo.org/glsa/202107-07",
+            "https://security.netapp.com/advisory/ntap-20210629-0005/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27896",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27896#c1"
+          ],
+          "PublishedDate": "2021-05-25T22:15:00Z",
+          "LastModifiedDate": "2022-01-28T20:58:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-35942",
+          "PkgName": "libc-bin",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35942",
+          "Title": "glibc: Arbitrary read in wordexp()",
+          "Description": "The wordexp function in the GNU C Library (aka glibc) through 2.33 may crash or read arbitrary memory in parse_param (in posix/wordexp.c) when called with an untrusted, crafted pattern, potentially resulting in a denial of service or disclosure of information. This occurs because atoi was used but strtoul should have been used to ensure correct calculations.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V2Score": 6.4,
+              "V3Score": 9.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 9.1
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-35942",
+            "https://linux.oracle.com/cve/CVE-2021-35942.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9560.html",
+            "https://security.netapp.com/advisory/ntap-20210827-0005/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=28011",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=5adda61f62b77384718b4c0d8336ade8f2b4b35c",
+            "https://sourceware.org/glibc/wiki/Security%20Exceptions"
+          ],
+          "PublishedDate": "2021-07-22T18:15:00Z",
+          "LastModifiedDate": "2021-09-21T18:16:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-38604",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-38604",
+          "Title": "glibc: NULL pointer dereference in helper_thread() in mq_notify.c while handling NOTIFY_REMOVED messages",
+          "Description": "In librt in the GNU C Library (aka glibc) through 2.34, sysdeps/unix/sysv/linux/mq_notify.c mishandles certain NOTIFY_REMOVED data, leading to a NULL pointer dereference. NOTE: this vulnerability was introduced as a side effect of the CVE-2021-33574 fix.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-476"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://blog.tuxcare.com/cve/tuxcare-team-identifies-cve-2021-38604-a-new-vulnerability-in-glibc",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-38604",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GYEXYM37RCJWJ6B5KQUYQI4NZBDDYSXP/",
+            "https://security.netapp.com/advisory/ntap-20210909-0005/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=28213",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=4cc79c217744743077bf7a0ec5e0a4318f1e6641",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=b805aebd42364fe696e417808a700fdb9800c9e8"
+          ],
+          "PublishedDate": "2021-08-12T16:15:00Z",
+          "LastModifiedDate": "2021-10-07T19:06:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3999",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3999",
+          "Title": "glibc: Off-by-one buffer overflow/underflow in getcwd()",
+          "Description": "A flaw was found in glibc. An off-by-one buffer overflow and underflow in getcwd() may lead to memory corruption when the size of the buffer is exactly 1. A local attacker who can control the input buffer and size passed to getcwd() in a setuid program could use this flaw to potentially execute arbitrary code and escalate their privileges on the system.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.4
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3999",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/4"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2022-23218",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-23218",
+          "Title": "glibc: stack-based buffer overflow in svcunix_create via long pathnames",
+          "Description": "The deprecated compatibility function svcunix_create in the sunrpc module of the GNU C Library (aka glibc) through 2.34 copies its path argument on the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) arbitrary code execution.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-120"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23218",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=28768"
+          ],
+          "PublishedDate": "2022-01-14T07:15:00Z",
+          "LastModifiedDate": "2022-01-21T03:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-23219",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-23219",
+          "Title": "glibc: stack-based buffer overflow in sunrpc clnt_create via a long pathname",
+          "Description": "The deprecated compatibility function clnt_create in the sunrpc module of the GNU C Library (aka glibc) through 2.34 copies its hostname argument on the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) arbitrary code execution.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-120"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23219",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=22542"
+          ],
+          "PublishedDate": "2022-01-14T07:15:00Z",
+          "LastModifiedDate": "2022-01-21T16:48:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2016-10228",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-10228",
+          "Title": "glibc: iconv program can hang when invoked with the -c option",
+          "Description": "The iconv program in the GNU C Library (aka glibc or libc6) 2.31 and earlier, when invoked with multiple suffixes in the destination encoding (TRANSLATE or IGNORE) along with the -c option, enters an infinite loop when processing invalid multi-byte input sequences, leading to a denial of service.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 4.3,
+              "V3Score": 5.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "http://openwall.com/lists/oss-security/2017/03/01/10",
+            "http://www.securityfocus.com/bid/96525",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10228",
+            "https://linux.oracle.com/cve/CVE-2016-10228.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://security.gentoo.org/glsa/202101-20",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=19519",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=19519#c21",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=26224"
+          ],
+          "PublishedDate": "2017-03-02T01:59:00Z",
+          "LastModifiedDate": "2021-02-25T17:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-25013",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-25013",
+          "Title": "glibc: buffer over-read in iconv when processing invalid multi-byte input sequences in the EUC-KR encoding",
+          "Description": "The iconv feature in the GNU C Library (aka glibc or libc6) through 2.32, when processing invalid multi-byte input sequences in the EUC-KR encoding, may have a buffer over-read.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 7.1,
+              "V3Score": 5.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.8
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-25013",
+            "https://linux.oracle.com/cve/CVE-2019-25013.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://lists.apache.org/thread.html/r32d767ac804e9b8aad4355bb85960a6a1385eab7afff549a5e98660f@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r448bb851cc8e6e3f93f3c28c70032b37062625d81214744474ac49e7@%3Cdev.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r4806a391091e082bdea17266452ca656ebc176e51bb3932733b3a0a2@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r499e4f96d0b5109ef083f2feccd33c51650c1b7d7068aa3bd47efca9@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r5af4430421bb6f9973294691a7904bbd260937e9eef96b20556f43ff@%3Cjira.kafka.apache.org%3E",
+            "https://lists.apache.org/thread.html/r750eee18542bc02bd8350861c424ee60a9b9b225568fa09436a37ece@%3Cissues.zookeeper.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7a2e94adfe0a2f0a1d42e4927e8c32ecac97d37db9cb68095fe9ddbc@%3Cdev.zookeeper.apache.org%3E",
+            "https://lists.apache.org/thread.html/rd2354f9ccce41e494fbadcbc5ad87218de6ec0fff8a7b54c8462226c@%3Cissues.zookeeper.apache.org%3E",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4Y6TX47P47KABSFOL26FLDNVCWXDKDEZ/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TVCUNLQ3HXGS4VPUQKWTJGRAW2KTFGXS/",
+            "https://security.netapp.com/advisory/ntap-20210205-0004/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=24973",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=ee7a3144c9922808181009b7b3e50e852fb4999b"
+          ],
+          "PublishedDate": "2021-01-04T18:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-27618",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-27618",
+          "Title": "glibc: iconv when processing invalid multi-byte input sequences fails to advance the input state, which could result in an infinite loop",
+          "Description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid multi-byte input sequences in IBM1364, IBM1371, IBM1388, IBM1390, and IBM1399 encodings, fails to advance the input state, which could lead to an infinite loop in applications, resulting in a denial of service, a different vulnerability from CVE-2016-10228.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-835"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 2.1,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27618",
+            "https://linux.oracle.com/cve/CVE-2020-27618.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://security.netapp.com/advisory/ntap-20210401-0006/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=19519#c21",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=26224"
+          ],
+          "PublishedDate": "2021-02-26T23:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-29562",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-29562",
+          "Title": "glibc: assertion failure in iconv when converting invalid UCS4",
+          "Description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.30 to 2.32, when converting UCS4 text containing an irreversible character, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-617"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:H/Au:S/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 2.1,
+              "V3Score": 4.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.8
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29562",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TVCUNLQ3HXGS4VPUQKWTJGRAW2KTFGXS/",
+            "https://security.gentoo.org/glsa/202101-20",
+            "https://security.netapp.com/advisory/ntap-20210122-0004/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=26923",
+            "https://sourceware.org/pipermail/libc-alpha/2020-November/119822.html"
+          ],
+          "PublishedDate": "2020-12-04T07:15:00Z",
+          "LastModifiedDate": "2021-03-19T18:41:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-6096",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-6096",
+          "Title": "glibc: signed comparison vulnerability in the ARMv7 memcpy function",
+          "Description": "An exploitable signed comparison vulnerability exists in the ARMv7 memcpy() implementation of GNU glibc 2.30.9000. Calling memcpy() (on ARMv7 targets that utilize the GNU glibc implementation) with a negative value for the 'num' parameter results in a signed comparison vulnerability. If an attacker underflows the 'num' parameter to memcpy(), this vulnerability could lead to undefined behavior such as writing to out-of-bounds memory and potentially remote code execution. Furthermore, this memcpy() implementation allows for program execution to continue in scenarios where a segmentation fault or crash should have occurred. The dangers occur in that subsequent execution and iterations of this code will be executed with this corrupted data.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-191"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 8.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6096",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SPYXTDOOB4PQGTYAMZAZNJIB3FF6YQXI/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/URXOIA2LDUKHQXK4BE55BQBRI6ZZG3Y6/",
+            "https://security.gentoo.org/glsa/202101-20",
+            "https://sourceware.org/bugzilla/attachment.cgi?id=12334",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=25620",
+            "https://talosintelligence.com/vulnerability_reports/TALOS-2020-1019",
+            "https://ubuntu.com/security/notices/USN-4954-1",
+            "https://www.talosintelligence.com/vulnerability_reports/TALOS-2020-1019"
+          ],
+          "PublishedDate": "2020-04-01T22:15:00Z",
+          "LastModifiedDate": "2021-03-04T20:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-27645",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-27645",
+          "Title": "glibc: Use-after-free in addgetnetgrentX function in netgroupcache.c",
+          "Description": "The nameserver caching daemon (nscd) in the GNU C Library (aka glibc or libc6) 2.29 through 2.33, when processing a request for netgroup lookup, may crash due to a double-free, potentially resulting in degraded service or Denial of Service on the local system. This is related to netgroupcache.c.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-415"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 1.9,
+              "V3Score": 2.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 2.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-27645",
+            "https://linux.oracle.com/cve/CVE-2021-27645.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9560.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7LZNT6KTMCCWPWXEOGSHD3YLYZKUGMH5/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I7TS26LIZSOBLGJEZMJX4PXT5BQDE2WS/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27462"
+          ],
+          "PublishedDate": "2021-02-24T15:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3326",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3326",
+          "Title": "glibc: Assertion failure in ISO-2022-JP-3 gconv module related to combining characters",
+          "Description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid input sequences in the ISO-2022-JP-3 encoding, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-617"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2021/01/28/2",
+            "https://bugs.chromium.org/p/project-zero/issues/detail?id=2146",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3326",
+            "https://linux.oracle.com/cve/CVE-2021-3326.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9344.html",
+            "https://security.netapp.com/advisory/ntap-20210304-0007/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27256",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=7d88c6142c6efc160c0ee5e4f85cde382c072888",
+            "https://sourceware.org/pipermail/libc-alpha/2021-January/122058.html"
+          ],
+          "PublishedDate": "2021-01-27T20:15:00Z",
+          "LastModifiedDate": "2021-07-06T06:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-33574",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-33574",
+          "Title": "glibc: mq_notify does not handle separately allocated thread attributes",
+          "Description": "The mq_notify function in the GNU C Library (aka glibc) versions 2.32 and 2.33 has a use-after-free. It may use the notification thread attributes object (passed through its struct sigevent parameter) after it has been freed by the caller, leading to a denial of service (application crash) or possibly unspecified other impact.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-416"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33574",
+            "https://linux.oracle.com/cve/CVE-2021-33574.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9560.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KJYYIMDDYOHTP2PORLABTOHYQYYREZDD/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RBUUWUGXVILQXVWEOU7N42ICHPJNAEUP/",
+            "https://security.gentoo.org/glsa/202107-07",
+            "https://security.netapp.com/advisory/ntap-20210629-0005/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27896",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=27896#c1"
+          ],
+          "PublishedDate": "2021-05-25T22:15:00Z",
+          "LastModifiedDate": "2022-01-28T20:58:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-35942",
+          "PkgName": "libc6",
+          "InstalledVersion": "2.31-0ubuntu9.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-35942",
+          "Title": "glibc: Arbitrary read in wordexp()",
+          "Description": "The wordexp function in the GNU C Library (aka glibc) through 2.33 may crash or read arbitrary memory in parse_param (in posix/wordexp.c) when called with an untrusted, crafted pattern, potentially resulting in a denial of service or disclosure of information. This occurs because atoi was used but strtoul should have been used to ensure correct calculations.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V2Score": 6.4,
+              "V3Score": 9.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 9.1
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-35942",
+            "https://linux.oracle.com/cve/CVE-2021-35942.html",
+            "https://linux.oracle.com/errata/ELSA-2021-9560.html",
+            "https://security.netapp.com/advisory/ntap-20210827-0005/",
+            "https://sourceware.org/bugzilla/show_bug.cgi?id=28011",
+            "https://sourceware.org/git/?p=glibc.git;a=commit;h=5adda61f62b77384718b4c0d8336ade8f2b4b35c",
+            "https://sourceware.org/glibc/wiki/Security%20Exceptions"
+          ],
+          "PublishedDate": "2021-07-22T18:15:00Z",
+          "LastModifiedDate": "2021-09-21T18:16:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "libfdisk1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "libfdisk1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "libfdisk1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-43618",
+          "PkgName": "libgmp10",
+          "InstalledVersion": "2:6.2.0+dfsg-4",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-43618",
+          "Title": "gmp: Integer overflow and resultant buffer overflow via crafted input",
+          "Description": "GNU Multiple Precision Arithmetic Library (GMP) through 6.2.1 has an mpz/inp_raw.c integer overflow and resultant buffer overflow via crafted input, leading to a segmentation fault on 32-bit platforms.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 6.2
+            }
+          },
+          "References": [
+            "https://bugs.debian.org/994405",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43618",
+            "https://gmplib.org/list-archives/gmp-bugs/2021-September/005077.html",
+            "https://gmplib.org/repo/gmp-6.2/rev/561a9c25298e",
+            "https://lists.debian.org/debian-lts-announce/2021/12/msg00001.html"
+          ],
+          "PublishedDate": "2021-11-15T04:15:00Z",
+          "LastModifiedDate": "2021-12-16T18:39:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "libmount1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "libmount1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "libmount1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-11164",
+          "PkgName": "libpcre3",
+          "InstalledVersion": "2:8.39-12build1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-11164",
+          "Title": "pcre: OP_KETRMAX feature in the match function in pcre_exec.c",
+          "Description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-674"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 7.8,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "http://openwall.com/lists/oss-security/2017/07/11/3",
+            "http://www.securityfocus.com/bid/99575",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11164",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E"
+          ],
+          "PublishedDate": "2017-07-11T03:29:00Z",
+          "LastModifiedDate": "2021-02-25T17:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-20838",
+          "PkgName": "libpcre3",
+          "InstalledVersion": "2:8.39-12build1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-20838",
+          "Title": "pcre: Buffer over-read in JIT when UTF is disabled and \\X or \\R has fixed quantifier greater than 1",
+          "Description": "libpcre in PCRE before 8.43 allows a subject buffer over-read in JIT when UTF is disabled, and \\X or \\R has more than one fixed quantifier, a related issue to CVE-2019-20454.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 4.3,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://seclists.org/fulldisclosure/2020/Dec/32",
+            "http://seclists.org/fulldisclosure/2021/Feb/14",
+            "https://bugs.gentoo.org/717920",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20838",
+            "https://linux.oracle.com/cve/CVE-2019-20838.html",
+            "https://linux.oracle.com/errata/ELSA-2021-4373.html",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://support.apple.com/kb/HT211931",
+            "https://support.apple.com/kb/HT212147",
+            "https://www.pcre.org/original/changelog.txt"
+          ],
+          "PublishedDate": "2020-06-15T17:15:00Z",
+          "LastModifiedDate": "2021-09-22T14:22:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-14155",
+          "PkgName": "libpcre3",
+          "InstalledVersion": "2:8.39-12build1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-14155",
+          "Title": "pcre: Integer overflow when parsing callout numeric arguments",
+          "Description": "libpcre in PCRE before 8.44 allows an integer overflow via a large number after a (?C substring.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 5,
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://seclists.org/fulldisclosure/2020/Dec/32",
+            "http://seclists.org/fulldisclosure/2021/Feb/14",
+            "https://about.gitlab.com/releases/2020/07/01/security-release-13-1-2-release/",
+            "https://bugs.gentoo.org/717920",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14155",
+            "https://linux.oracle.com/cve/CVE-2020-14155.html",
+            "https://linux.oracle.com/errata/ELSA-2021-4373.html",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://support.apple.com/kb/HT211931",
+            "https://support.apple.com/kb/HT212147",
+            "https://www.pcre.org/original/changelog.txt"
+          ],
+          "PublishedDate": "2020-06-15T17:15:00Z",
+          "LastModifiedDate": "2021-09-22T14:22:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-36084",
+          "PkgName": "libsepol1",
+          "InstalledVersion": "3.0-1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-36084",
+          "Title": "libsepol: use-after-free in __cil_verify_classperms()",
+          "Description": "The CIL compiler in SELinux 3.2 has a use-after-free in __cil_verify_classperms (called from __cil_verify_classpermission and __cil_pre_verify_helper).",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-416"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V2Score": 2.1,
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=31065",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36084",
+            "https://github.com/SELinuxProject/selinux/commit/f34d3d30c8325e4847a6b696fe7a3936a8a361f3",
+            "https://github.com/google/oss-fuzz-vulns/blob/main/vulns/selinux/OSV-2021-417.yaml",
+            "https://linux.oracle.com/cve/CVE-2021-36084.html",
+            "https://linux.oracle.com/errata/ELSA-2021-4513.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U7ZYR3PIJ75N6U2IONJWCKZ5L2NKJTGR/"
+          ],
+          "PublishedDate": "2021-07-01T03:15:00Z",
+          "LastModifiedDate": "2021-11-17T03:16:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-36085",
+          "PkgName": "libsepol1",
+          "InstalledVersion": "3.0-1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-36085",
+          "Title": "libsepol: use-after-free in __cil_verify_classperms()",
+          "Description": "The CIL compiler in SELinux 3.2 has a use-after-free in __cil_verify_classperms (called from __verify_map_perm_classperms and hashtab_map).",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-416"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 2.1,
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=31124",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36085",
+            "https://github.com/SELinuxProject/selinux/commit/2d35fcc7e9e976a2346b1de20e54f8663e8a6cba",
+            "https://github.com/google/oss-fuzz-vulns/blob/main/vulns/selinux/OSV-2021-421.yaml",
+            "https://linux.oracle.com/cve/CVE-2021-36085.html",
+            "https://linux.oracle.com/errata/ELSA-2021-4513.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U7ZYR3PIJ75N6U2IONJWCKZ5L2NKJTGR/"
+          ],
+          "PublishedDate": "2021-07-01T03:15:00Z",
+          "LastModifiedDate": "2021-11-17T03:26:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-36086",
+          "PkgName": "libsepol1",
+          "InstalledVersion": "3.0-1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-36086",
+          "Title": "libsepol: use-after-free in cil_reset_classpermission()",
+          "Description": "The CIL compiler in SELinux 3.2 has a use-after-free in cil_reset_classpermission (called from cil_reset_classperms_set and cil_reset_classperms_list).",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-416"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 2.1,
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=32177",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36086",
+            "https://github.com/SELinuxProject/selinux/commit/c49a8ea09501ad66e799ea41b8154b6770fec2c8",
+            "https://github.com/google/oss-fuzz-vulns/blob/main/vulns/selinux/OSV-2021-536.yaml",
+            "https://linux.oracle.com/cve/CVE-2021-36086.html",
+            "https://linux.oracle.com/errata/ELSA-2021-4513.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U7ZYR3PIJ75N6U2IONJWCKZ5L2NKJTGR/"
+          ],
+          "PublishedDate": "2021-07-01T03:15:00Z",
+          "LastModifiedDate": "2021-11-17T03:27:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-36087",
+          "PkgName": "libsepol1",
+          "InstalledVersion": "3.0-1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-36087",
+          "Title": "libsepol: heap-based buffer overflow in ebitmap_match_any()",
+          "Description": "The CIL compiler in SELinux 3.2 has a heap-based buffer over-read in ebitmap_match_any (called indirectly from cil_check_neverallow). This occurs because there is sometimes a lack of checks for invalid statements in an optional block.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 2.1,
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=32675",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36087",
+            "https://github.com/SELinuxProject/selinux/commit/340f0eb7f3673e8aacaf0a96cbfcd4d12a405521",
+            "https://github.com/google/oss-fuzz-vulns/blob/main/vulns/selinux/OSV-2021-585.yaml",
+            "https://linux.oracle.com/cve/CVE-2021-36087.html",
+            "https://linux.oracle.com/errata/ELSA-2021-4513.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U7ZYR3PIJ75N6U2IONJWCKZ5L2NKJTGR/",
+            "https://lore.kernel.org/selinux/CAEN2sdqJKHvDzPnxS-J8grU8fSf32DDtx=kyh84OsCq_Vm+yaQ@mail.gmail.com/T/"
+          ],
+          "PublishedDate": "2021-07-01T03:15:00Z",
+          "LastModifiedDate": "2021-11-17T14:05:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "libsmartcols1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "libsmartcols1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "libsmartcols1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3997",
+          "PkgName": "libsystemd0",
+          "InstalledVersion": "245.4-4ubuntu3.14",
+          "FixedVersion": "245.4-4ubuntu3.15",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3997",
+          "Title": "systemd: Uncontrolled recursion in systemd-tmpfiles when removing files",
+          "Description": "A flaw was found in systemd. An uncontrolled recursion in systemd-tmpfiles may lead to a denial of service at boot time when too many nested directories are created in /tmp.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3997",
+            "https://ubuntu.com/security/notices/USN-5226-1",
+            "https://www.openwall.com/lists/oss-security/2022/01/10/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2018-1000654",
+          "PkgName": "libtasn1-6",
+          "InstalledVersion": "4.16.0-2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-1000654",
+          "Title": "libtasn1: Infinite loop in _asn1_expand_object_id(ptree) leads to memory exhaustion",
+          "Description": "GNU Libtasn1-4.13 libtasn1-4.13 version libtasn1-4.13, libtasn1-4.12 contains a DoS, specifically CPU usage will reach 100% when running asn1Paser against the POC due to an issue in _asn1_expand_object_id(p_tree), after a long time, the program will be killed. This attack appears to be exploitable via parsing a crafted file.",
+          "Severity": "LOW",
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 7.1,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 4
+            }
+          },
+          "References": [
+            "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00009.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00018.html",
+            "http://www.securityfocus.com/bid/105151",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000654",
+            "https://gitlab.com/gnutls/libtasn1/issues/4",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E"
+          ],
+          "PublishedDate": "2018-08-20T19:31:00Z",
+          "LastModifiedDate": "2021-02-25T17:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3997",
+          "PkgName": "libudev1",
+          "InstalledVersion": "245.4-4ubuntu3.14",
+          "FixedVersion": "245.4-4ubuntu3.15",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3997",
+          "Title": "systemd: Uncontrolled recursion in systemd-tmpfiles when removing files",
+          "Description": "A flaw was found in systemd. An uncontrolled recursion in systemd-tmpfiles may lead to a denial of service at boot time when too many nested directories are created in /tmp.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3997",
+            "https://ubuntu.com/security/notices/USN-5226-1",
+            "https://www.openwall.com/lists/oss-security/2022/01/10/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "libuuid1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "libuuid1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "libuuid1",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2013-4235",
+          "PkgName": "login",
+          "InstalledVersion": "1:4.8.1-1ubuntu5.20.04.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2013-4235",
+          "Title": "shadow-utils: TOCTOU race conditions by copying and removing directory trees",
+          "Description": "shadow: TOCTOU (time-of-check time-of-use) race condition when copying and removing directory trees",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-367"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:M/Au:N/C:N/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "V2Score": 3.3,
+              "V3Score": 4.7
+            },
+            "redhat": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+              "V2Score": 3.7,
+              "V3Score": 4.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/cve-2013-4235",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-4235",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4235",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://security-tracker.debian.org/tracker/CVE-2013-4235"
+          ],
+          "PublishedDate": "2019-12-03T15:15:00Z",
+          "LastModifiedDate": "2021-02-25T17:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "mount",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "mount",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "mount",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2013-4235",
+          "PkgName": "passwd",
+          "InstalledVersion": "1:4.8.1-1ubuntu5.20.04.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2013-4235",
+          "Title": "shadow-utils: TOCTOU race conditions by copying and removing directory trees",
+          "Description": "shadow: TOCTOU (time-of-check time-of-use) race condition when copying and removing directory trees",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-367"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:M/Au:N/C:N/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "V2Score": 3.3,
+              "V3Score": 4.7
+            },
+            "redhat": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+              "V2Score": 3.7,
+              "V3Score": 4.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/cve-2013-4235",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-4235",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4235",
+            "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+            "https://security-tracker.debian.org/tracker/CVE-2013-4235"
+          ],
+          "PublishedDate": "2019-12-03T15:15:00Z",
+          "LastModifiedDate": "2021-02-25T17:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-16156",
+          "PkgName": "perl-base",
+          "InstalledVersion": "5.30.0-9ubuntu0.2",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-16156",
+          "Title": "perl-CPAN: Bypass of verification of signatures in CHECKSUMS files",
+          "Description": "CPAN 2.28 allows Signature Verification Bypass.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-347"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V2Score": 6.8,
+              "V3Score": 7.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7.8
+            }
+          },
+          "References": [
+            "http://blogs.perl.org/users/neilb/2021/11/addressing-cpan-vulnerabilities-related-to-checksums.html",
+            "https://blog.hackeriet.no/cpan-signature-verification-vulnerabilities/",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16156",
+            "https://github.com/andk/cpanpm/commit/b27c51adf0fda25dee84cb72cb2b1bf7d832148c",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SD6RYOJII7HRJ6WVORFNVTYNOFY5JDXN/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SZ32AJIV4RHJMLWLU5QULGKMMIHYOMDC/",
+            "https://metacpan.org/pod/distribution/CPAN/scripts/cpan"
+          ],
+          "PublishedDate": "2021-12-13T18:15:00Z",
+          "LastModifiedDate": "2022-01-12T03:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3995",
+          "PkgName": "util-linux",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3995",
+          "Title": "util-linux: Unauthorized unmount of FUSE filesystems belonging to users with similar uid",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3995",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-3996",
+          "PkgName": "util-linux",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3996",
+          "Title": "util-linux: Unauthorized unmount of filesystems in libmount",
+          "Description": "A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3996",
+            "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/v2.37.3-ReleaseNotes",
+            "https://www.openwall.com/lists/oss-security/2022/01/24/2"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2021-37600",
+          "PkgName": "util-linux",
+          "InstalledVersion": "2.34-0.1ubuntu9.1",
+          "Layer": {
+            "Digest": "sha256:ea362f368469f909a95f9a6e54ebe0121ce0a8e3c30583dd9c5fb35b14544dec",
+            "DiffID": "sha256:0eba131dffd015134cb310c284b776c1e44d330146cd2f0e30c4e464d0b76d24"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-37600",
+          "Title": "util-linux: integer overflow can lead to buffer overflow in get_sem_elements() in sys-utils/ipcutils.c",
+          "Description": "** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-190"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V2Score": 1.2,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 4.7
+            }
+          },
+          "References": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-37600",
+            "https://github.com/karelzak/util-linux/commit/1c9143d0c1f979c3daf10e1c37b5b1e916c22a1c",
+            "https://github.com/karelzak/util-linux/issues/1395",
+            "https://security.netapp.com/advisory/ntap-20210902-0002/"
+          ],
+          "PublishedDate": "2021-07-30T14:15:00Z",
+          "LastModifiedDate": "2021-10-18T12:18:00Z"
+        }
+      ]
+    }
+  ]
+}
